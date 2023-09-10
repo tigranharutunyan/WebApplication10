@@ -1,0 +1,38 @@
+﻿@using WebApplication10.Data.Entity
+@model UserRegistrationcs
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Registration</title>
+</head>
+<body>
+    <h1>Registration</h1>
+    <form meta ="post" >
+        <div>
+             <input asp-for = "FirstName" />
+            <label asp-for = "FirstName" >FisrtName</label>
+        </div>
+        <div>
+            <input asp-for="LastName" />
+            <label asp-for="LastName">LastName</label>
+        </div>
+        <div>
+            @* <label for="dob">Date of Birth:</label> *@
+            <input type="date" id="dob" name="dob" required>
+            <label asp-for="DOB">DOB</label> 
+        </div>
+        <div>
+            <input asp-for ="Email" />
+            <label asp-for = "Email">Email</label>
+        </div>
+        <button type="submit">Registration</button>
+        
+    </form>
+</body>
+</html>
